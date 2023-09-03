@@ -1,9 +1,12 @@
-import styles from '@/App.module.css'
+import { Navbar } from './components/organisms/Navbar'
+
+import styles from './App.module.css'
 
 export function App() {
   return (
-    <div className={styles.content}>
-      <h1>Home</h1>
-    </div>
+    <>
+      <Navbar />
+      <div className={styles.content}></div>
+    </>
   )
 }

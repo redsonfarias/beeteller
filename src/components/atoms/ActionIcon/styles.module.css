@@ -1,0 +1,17 @@
+.container,
+.disabled {
+  background: var(--high-light);
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container:hover {
+  cursor: pointer;
+  background: var(--high-medium);
+}
