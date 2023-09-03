@@ -1,0 +1,12 @@
+.menu,
+.menuSkeletons {
+  display: flex;
+}
+
+.menu {
+  gap: var(--gap-md);
+}
+
+.menuSkeletons {
+  gap: 3rem;
+}

@@ -1,0 +1,10 @@
+.default {
+  background: transparent;
+}
+
+.active,
+.default:hover {
+  background: var(--high-light);
+  border-top: 1px solid var(--high-light);
+  color: var(--low-pure);
+}

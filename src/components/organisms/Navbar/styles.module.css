@@ -1,0 +1,9 @@
+.container {
+  background: var(--high-pure);
+  border-bottom: 1px solid var(--high-medium);
+  padding: var(--padding-lg);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
