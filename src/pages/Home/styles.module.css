@@ -1,0 +1,17 @@
+.textFlex {
+  display: flex;
+  align-items: center;
+  color: var(--low-pure);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: var(--font-lg);
+  line-height: var(--line-lg);
+  color: var(--low-pure);
+  margin: 0 0.5rem;
+}
+
+.graySm {
+  color: var(--low-medium);
+}

@@ -5,7 +5,7 @@ interface Props {
   height?: number
 }
 
-export function Skeleton({ width, height }: Props) {
+export function Skeleton({ width = 1.125, height = 0.75 }: Props) {
   const skeletonStyles = {
     width: `${width}rem`,
     height: `${height}rem`
