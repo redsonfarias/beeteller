@@ -16,7 +16,7 @@
 }
 
 .container:hover {
-  box-shadow: 0px 16px 48px 0px #0000003D;
+  box-shadow: 0 16px 48px 0 #0000003D;
 
   .arrow {
     transform: translateX(0%);
@@ -74,7 +74,10 @@
 
   transform: translateX(-200%);
   opacity: 0;
-  transition: all 0.8s ease-in-out;
+  transition:
+    transform 1.5s,
+    opacity 0.2s;
+  transition-delay: 0.3s;
 }
 
 .gradientEffect {
@@ -86,8 +89,10 @@
   width: 50%;
   max-width: 10rem;
   border-radius: 100%;
-  background: linear-gradient(to bottom right, var(--low-pure), var(--low-light));
-  filter: blur(64px);
+  background: linear-gradient(to bottom right,
+      var(--low-pure),
+      var(--low-light));
+  filter: blur(80px);
 
   opacity: 0;
   transition: all 0.5s ease-in-out;

@@ -1,4 +1,10 @@
 .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 6.75rem;
   background: var(--high-pure);
   border-bottom: 1px solid var(--high-medium);
   padding: var(--padding-lg);

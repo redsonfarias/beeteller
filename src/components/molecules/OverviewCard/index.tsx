@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { ReactComponent as ArrowRight } from '@/assets/icons/yellow-arrow-right.svg'
+import { formatValue } from '@/util'
 
 import styles from './styles.module.css'
 
@@ -12,9 +13,7 @@ interface Props {
 }
 
 export function OverviewCard({ icon, name, value, label, tag }: Props) {
-  const formattedValue = new Intl.NumberFormat('pt-BR', {
-    minimumFractionDigits: 2
-  }).format(value)
+  const formattedValue = formatValue(value)
 
   return (
     <div className={styles.container}>
