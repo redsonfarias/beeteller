@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ReactComponent as ArrowRight } from '@/assets/icons/yellow-arrow-right.svg'
 
 import styles from './styles.module.css'
 
@@ -37,6 +38,9 @@ export function OverviewCard({ icon, name, value, label, tag }: Props) {
           <p>R$</p> <strong>{formattedValue}</strong>
         </div>
       </footer>
+
+      <div className={styles.gradientEffect} />
+      <ArrowRight className={styles.arrow} />
     </div>
   )
 }
