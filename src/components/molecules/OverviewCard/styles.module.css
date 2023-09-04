@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   height: 14rem;
   background: var(--low-pure);
   padding: var(--padding-lg);
@@ -10,6 +11,21 @@
   justify-content: space-between;
 
   cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0px 16px 48px 0px #0000003D;
+
+  .arrow {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .gradientEffect {
+    opacity: 1;
+  }
 }
 
 .container header {
@@ -49,4 +65,30 @@
   border-radius: var(--radius-sm);
   background: var(--secondary-pure);
   color: var(--low-pure);
+}
+
+.arrow {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 2.5rem;
+
+  transform: translateX(-200%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.gradientEffect {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  height: 8rem;
+  width: 50%;
+  max-width: 10rem;
+  border-radius: 100%;
+  background: linear-gradient(to bottom right, var(--low-pure), var(--low-light));
+  filter: blur(64px);
+
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
