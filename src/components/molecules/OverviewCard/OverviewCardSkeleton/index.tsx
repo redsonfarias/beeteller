@@ -6,6 +6,7 @@ export function OverviewCardSkeleton() {
   return (
     <div className={styles.container}>
       <header>
+        <Skeleton width={2} height={1.2} />
         <Skeleton width={6.25} />
       </header>
       <footer>

@@ -8,6 +8,7 @@
   --high-pure: #fbfbfb;
   --high-light: #ededed;
   --high-medium: #e0e0e0;
+  --success: #24A148;
   --warning: #f1c21b;
   --danger: #da1e28;
 
@@ -57,4 +58,21 @@ button {
   border: 0;
   border-radius: var(--radius-sm);
   padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  padding: 0 4px;
+  border-right: 2px solid transparent;
+  background: var(--low-light);
+  background-clip: padding-box;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7f7f7f;
 }

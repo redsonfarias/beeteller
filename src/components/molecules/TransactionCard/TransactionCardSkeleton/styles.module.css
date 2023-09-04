@@ -1,0 +1,18 @@
+.container {
+  background: var(--high-light);
+  border-radius: var(--radius-md);
+  padding: var(--padding-lg);
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  gap: var(--gap-lg);
+  align-items: center;
+
+  color: var(--low-pure);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}

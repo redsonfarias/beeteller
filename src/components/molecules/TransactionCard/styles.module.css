@@ -1,0 +1,38 @@
+.container {
+  background: var(--high-light);
+  border-radius: var(--radius-md);
+  padding: var(--padding-lg);
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 8rem;
+  gap: var(--gap-lg);
+  align-items: center;
+
+  color: var(--low-pure);
+}
+
+.container p,
+.container span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.accountType {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.income,
+.outcome {
+  text-align: center;
+}
+
+.income {
+  color: var(--success);
+}
+
+.outcome {
+  color: var(--danger);
+}

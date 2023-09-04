@@ -1,4 +1,11 @@
-.textFlex {
+.sections {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  gap: var(--gap-lg);
+  margin-top: 1.5rem;
+}
+
+.flexText {
   display: flex;
   align-items: center;
   color: var(--low-pure);
@@ -12,6 +19,6 @@
   margin: 0 0.5rem;
 }
 
-.graySm {
+.subtitle {
   color: var(--low-medium);
 }
