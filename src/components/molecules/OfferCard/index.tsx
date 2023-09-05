@@ -3,11 +3,14 @@ import { ReactComponent as Shop } from '@/assets/icons/shop.svg'
 import { ReactComponent as ArrowRight } from '@/assets/icons/black-arrow-right.svg'
 import image from '@/assets/offer.png'
 import { Button } from '@/components/atoms/Button'
+import { OfferCardSkeleton } from './OfferCardSkeleton'
 
 import styles from './styles.module.css'
 
 export function OfferCard() {
   const [isHover, setIsHover] = useState(false)
+
+  const loading = false
 
   const handleMouseEnter = () => {
     setIsHover(true)
@@ -15,6 +18,10 @@ export function OfferCard() {
 
   const handleMouseLeave = () => {
     setIsHover(false)
+  }
+
+  if (loading) {
+    return <OfferCardSkeleton />
   }
 
   return (
