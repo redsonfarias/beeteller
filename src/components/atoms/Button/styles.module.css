@@ -1,0 +1,21 @@
+.default,
+.expand {
+  padding: var(--padding-md);
+  border-radius: var(--radius-sm);
+
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-md);
+
+  transition: all 0.8s ease-in-out;
+}
+
+.default {
+  width: 8.25rem;
+  background: var(--secondary-pure);
+}
+
+.expand {
+  width: 100%;
+  background: var(--secondary-medium);
+}

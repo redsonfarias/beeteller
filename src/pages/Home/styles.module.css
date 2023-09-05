@@ -4,21 +4,3 @@
   gap: var(--gap-lg);
   margin-top: 1.5rem;
 }
-
-.flexText {
-  display: flex;
-  align-items: center;
-  color: var(--low-pure);
-  margin-bottom: 0.75rem;
-}
-
-.title {
-  font-size: var(--font-lg);
-  line-height: var(--line-lg);
-  color: var(--low-pure);
-  margin: 0 0.5rem;
-}
-
-.subtitle {
-  color: var(--low-medium);
-}

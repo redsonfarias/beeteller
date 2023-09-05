@@ -1,0 +1,32 @@
+.row,
+.col {
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+.row {
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row span,
+.col span {
+  color: var(--low-pure);
+}
+
+.row p,
+.col p {
+  display: flex;
+  align-items: center;
+}
+
+.row strong,
+.col strong {
+  font-size: var(--font-lg);
+  line-height: var(--line-lg);
+  color: var(--low-pure);
+  margin: 0 0.5rem;
+}

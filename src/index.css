@@ -8,7 +8,7 @@
   --high-pure: #fbfbfb;
   --high-light: #ededed;
   --high-medium: #e0e0e0;
-  --success: #24A148;
+  --success: #24a148;
   --warning: #f1c21b;
   --danger: #da1e28;
 
@@ -42,6 +42,7 @@
 
 body {
   background: var(--high-pure);
+  color: var(--low-medium);
 }
 
 body,
@@ -50,7 +51,6 @@ button {
   font-weight: 600;
   font-size: var(--font-sm);
   line-height: var(--line-sm);
-  color: var(--low-medium);
 }
 
 button {
@@ -58,6 +58,7 @@ button {
   border: 0;
   border-radius: var(--radius-sm);
   padding: 1rem;
+  color: var(--low-pure);
 }
 
 ::-webkit-scrollbar {
