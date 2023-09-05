@@ -11,7 +11,7 @@
 }
 
 .image {
-  background: #dbdbdb;
+  background: var(--skeleton);
   height: 9.5rem;
 }
 

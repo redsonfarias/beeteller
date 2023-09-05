@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { ReactComponent as ArrowRight } from '@/assets/icons/yellow-arrow-right.svg'
+import { ArrowForward } from '@/icons/ArrowForward'
 import { formatValue } from '@/util'
 
 import styles from './styles.module.css'
@@ -39,7 +39,7 @@ export function OverviewCard({ icon, name, value, label, tag }: Props) {
       </footer>
 
       <div className={styles.gradientEffect} />
-      <ArrowRight className={styles.arrow} />
+      <ArrowForward className={styles.arrow} color="var(--secondary-pure)" />
     </div>
   )
 }

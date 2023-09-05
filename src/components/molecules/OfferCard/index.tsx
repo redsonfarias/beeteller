@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { ReactComponent as Shop } from '@/assets/icons/shop.svg'
-import { ReactComponent as ArrowRight } from '@/assets/icons/black-arrow-right.svg'
+import { Shop } from '@/icons/Shop'
 import image from '@/assets/offer.png'
 import { Button } from '@/components/atoms/Button'
 import { OfferCardSkeleton } from './OfferCardSkeleton'
@@ -31,6 +30,7 @@ export function OfferCard() {
       onMouseLeave={handleMouseLeave}
     >
       <img className={styles.image} src={image} alt="" />
+
       <Shop className={styles.icon} />
 
       <div className={styles.content}>
@@ -42,9 +42,7 @@ export function OfferCard() {
           R$ <span>100.000,00</span>
         </p>
 
-        <Button expand={isHover}>
-          Ver oferta <ArrowRight />
-        </Button>
+        <Button expand={isHover}>Ver oferta</Button>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes } from 'react'
+import { ArrowForward } from '@/icons/ArrowForward'
 
 import styles from './styles.module.css'
 
@@ -11,7 +12,7 @@ export function Button({ expand, children, ...props }: Props) {
 
   return (
     <button className={styles[variant]} {...props}>
-      {children}
+      {children} <ArrowForward size={16} />
     </button>
   )
 }
