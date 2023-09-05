@@ -1,5 +1,5 @@
-import { ReactComponent as Wallet } from '@/assets/icons/black-wallet.svg'
-import { ReactComponent as Graphic } from '@/assets/icons/black-graphic.svg'
+import { Wallet } from '@/icons/Wallet'
+import { Graphic } from '@/icons/Graphic'
 import { formatValue } from '@/util'
 
 import styles from './styles.module.css'

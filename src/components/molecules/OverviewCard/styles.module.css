@@ -70,7 +70,7 @@
 .arrow {
   position: absolute;
   right: 1.5rem;
-  bottom: 2.5rem;
+  bottom: 2rem;
 
   transform: translateX(-200%);
   opacity: 0;
