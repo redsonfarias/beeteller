@@ -1,0 +1,37 @@
+.container {
+  height: 23rem;
+  border-radius: var(--radius-md);
+  background: var(--high-light);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+
+  overflow: hidden;
+}
+
+.image {
+  background: #dbdbdb;
+  height: 9.5rem;
+}
+
+.icon {
+  margin-left: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.button {
+  margin-left: 3rem;
+}
