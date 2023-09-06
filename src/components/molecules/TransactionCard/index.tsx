@@ -8,10 +8,12 @@ import styles from './styles.module.css'
 export function TransactionCard({
   amount,
   description,
-  account: accountType
+  account: accountType,
+  compensationType
 }: ITransaction) {
-  const formattedAmount = formatValue(amount)
-  const amountStyle = Number(formattedAmount) < 0 ? 'outcome' : 'income'
+  const amountType = compensationType === 'DEBIT' ? 'outcome' : 'income'
+  const prefix = amountType === 'income' ? '+' : '-'
+  const formattedAmount = `${prefix} R$ ${formatValue(amount)}`
 
   const accounts = {
     CURRENT: {
@@ -35,7 +37,7 @@ export function TransactionCard({
 
       <p>{description}</p>
 
-      <p className={styles[amountStyle]}>R$ {formattedAmount}</p>
+      <p className={styles[amountType]}>{formattedAmount}</p>
     </div>
   )
 }
