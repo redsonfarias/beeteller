@@ -1,6 +1,6 @@
-import { IIcons } from '@/@types'
+import { IIcon } from '@/@types'
 
-export function Wallet({ className = '', color, size = 24 }: IIcons) {
+export function Wallet({ className = '', color, size = 24 }: IIcon) {
   return (
     <svg
       className={className}
