@@ -1,6 +1,6 @@
 .sections {
   display: grid;
-  grid-template-columns: 1fr 20rem;
+  grid-template-columns: 2fr 0.8fr;
   gap: var(--gap-lg);
   margin-top: 1.5rem;
 }

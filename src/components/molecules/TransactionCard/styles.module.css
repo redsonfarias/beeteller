@@ -5,7 +5,7 @@
   padding: var(--padding-lg);
 
   display: grid;
-  grid-template-columns: 1fr 1.4fr 8rem;
+  grid-template-columns: 1fr 1.2fr 6rem;
   gap: var(--gap-lg);
   align-items: center;
 
