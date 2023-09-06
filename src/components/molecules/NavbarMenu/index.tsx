@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { AppContext } from '@/contexts/AppContext'
 import { ItemMenu } from '@/components/atoms/ItemMenu'
 import { Skeleton } from '@/components/atoms/Skeleton'
 import { IItem } from '@/@types'
@@ -11,13 +13,14 @@ interface Props {
 }
 
 export function NavbarMenu({ items, activeLink, handleActiveLink }: Props) {
-  const loading = false
-  const variant = loading ? 'menuSkeletons' : 'menu'
+  const { isLoading } = useContext(AppContext)
+
+  const variant = isLoading ? 'menuSkeletons' : 'menu'
 
   return (
     <div className={styles[variant]}>
       {items.map((item) =>
-        loading ? (
+        isLoading ? (
           <Skeleton key={item.name} width={item.skeletonWidth} />
         ) : (
           <ItemMenu

@@ -1,35 +1,29 @@
 import { Wallet } from '@/icons/Wallet'
 import { Graphic } from '@/icons/Graphic'
 import { formatValue } from '@/util'
+import { ITransaction } from '@/@types'
 
 import styles from './styles.module.css'
 
-interface Props {
-  description: string
-  value: number
-  type: 'income' | 'outcome'
-  accountType: 'current' | 'investment'
-}
-
 export function TransactionCard({
-  value,
+  amount,
   description,
-  type,
-  accountType
-}: Props) {
-  const prefix = type === 'income' ? '+' : '-'
-  const formattedValue = `${prefix} R$ ${formatValue(value)}`
+  account: accountType
+}: ITransaction) {
+  const formattedAmount = formatValue(amount)
+  const amountStyle = Number(formattedAmount) < 0 ? 'outcome' : 'income'
 
   const accounts = {
-    current: {
+    CURRENT: {
       type: 'Conta corrente',
       icon: <Wallet />
     },
-    investment: {
+    INVESTIMENT: {
       type: 'Conta investmento',
       icon: <Graphic />
     }
   }
+
   const account = accounts[accountType]
 
   return (
@@ -41,7 +35,7 @@ export function TransactionCard({
 
       <p>{description}</p>
 
-      <p className={styles[type]}>{formattedValue}</p>
+      <p className={styles[amountStyle]}>R$ {formattedAmount}</p>
     </div>
   )
 }

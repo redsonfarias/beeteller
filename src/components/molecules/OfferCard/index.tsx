@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { AppContext } from '@/contexts/AppContext'
 import { Shop } from '@/icons/Shop'
 import image from '@/assets/offer.png'
 import { Button } from '@/components/atoms/Button'
 import { OfferCardSkeleton } from './OfferCardSkeleton'
+import { IOffer } from '@/@types'
 
 import styles from './styles.module.css'
 
-export function OfferCard() {
+export function OfferCard({ title, subtitle, amount }: IOffer) {
   const [isHover, setIsHover] = useState(false)
-
-  const loading = false
+  const { isLoading } = useContext(AppContext)
 
   const handleMouseEnter = () => {
     setIsHover(true)
@@ -19,7 +20,7 @@ export function OfferCard() {
     setIsHover(false)
   }
 
-  if (loading) {
+  if (isLoading) {
     return <OfferCardSkeleton />
   }
 
@@ -34,12 +35,12 @@ export function OfferCard() {
       <Shop className={styles.icon} />
 
       <div className={styles.content}>
-        <p>Empréstimo Beeteller</p>
+        <p>{title}</p>
 
-        <span>Valor disponível de até</span>
+        <span>{subtitle}</span>
 
         <p className={styles.value}>
-          R$ <span>100.000,00</span>
+          R$ <span>{amount}</span>
         </p>
 
         <Button expand={isHover}>Ver oferta</Button>
