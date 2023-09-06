@@ -8,6 +8,7 @@
 @media screen and (max-width: 64rem) {
   .sections {
     grid-template-columns: 1fr;
-    margin-top: 3rem;
+    gap: 2rem;
+    margin-top: 2rem;
   }
 }
