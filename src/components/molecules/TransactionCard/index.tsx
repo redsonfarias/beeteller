@@ -36,7 +36,7 @@ export function TransactionCard({
     <div className={styles.container}>
       <div className={styles.accountType}>
         {account.icon}
-        <p>{account.type}</p>
+        <p className={styles.accountName}>{account.type}</p>
       </div>
 
       <p>{description}</p>

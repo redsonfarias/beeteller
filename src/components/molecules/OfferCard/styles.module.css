@@ -10,9 +10,13 @@
 
   overflow: hidden;
   cursor: pointer;
+
+  transition: all 0.8s ease-in-out;
 }
 
 .container:hover {
+  box-shadow: 0 8px 24px 0 #00000029;
+
   .image {
     height: 11.5rem;
     filter: sepia(0.4) saturate(1.5);
@@ -32,8 +36,8 @@
 }
 
 .icon {
-  transition: all 0.8s ease-in-out;
   margin-left: 1.5rem;
+  transition: all 0.8s ease-in-out;
 }
 
 .content {
@@ -70,4 +74,20 @@
   font-size: var(--font-lg);
   line-height: var(--line-lg);
   margin-bottom: 0.05rem;
+}
+
+@media screen and (max-width: 64rem) {
+  .container {
+    height: 30rem;
+  }
+
+  .container:hover {
+    .image {
+      height: 18.5rem;
+    }
+  }
+
+  .image {
+    height: 16rem;
+  }
 }
