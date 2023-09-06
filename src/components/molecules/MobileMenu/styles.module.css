@@ -1,12 +1,30 @@
 .sidebar,
-.sidebarActive {
+.activeSidebar {
   display: none;
+}
+
+.link,
+.activeLink {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeLink::after {
+  content: '';
+  width: 2rem;
+  border: 0.063rem solid var(--high-medium);
+}
+
+.link::after {
+  content: '';
+  width: 2rem;
+  border: 0.063rem solid transparent;
 }
 
 @media screen and (max-width: 64rem) {
 
   .sidebar,
-  .sidebarActive {
+  .activeSidebar {
     display: flex;
     flex-direction: column;
     gap: var(--gap-md);
@@ -26,13 +44,13 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .sidebarActive {
+  .activeSidebar {
     height: 12rem;
     padding: 1rem 3rem;
   }
 
   .sidebar p,
-  .sidebarActive p {
+  .activeSidebar p {
     font-size: var(--font-md);
     line-height: var(--line-md);
     color: var(--primary-pure);
@@ -42,7 +60,7 @@
 @media screen and (max-width: 48rem) {
 
   .sidebar,
-  .sidebarActive {
+  .activeSidebar {
     top: calc(5rem - 2px);
   }
 }

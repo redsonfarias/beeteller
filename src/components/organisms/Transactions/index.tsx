@@ -1,7 +1,7 @@
 import { TransactionCard } from '@/components/molecules/TransactionCard'
+import { TransactionCardSkeleton } from '@/components/molecules/TransactionCard/TransactionCardSkeleton'
 
 import styles from './styles.module.css'
-import { TransactionCardSkeleton } from '@/components/molecules/TransactionCard/TransactionCardSkeleton'
 
 interface ITransaction {
   id: string

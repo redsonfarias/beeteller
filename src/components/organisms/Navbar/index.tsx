@@ -11,31 +11,39 @@ const items = [
   { name: 'Home', skeletonWidth: 2.5 },
   { name: 'Extrato', skeletonWidth: 3.125 },
   { name: 'Area Pix', skeletonWidth: 3.5 },
-  { name: 'Cartão de Crédito', skeletonWidth: 7.25 }
+  { name: 'Cartão de Crédito', skeletonWidth: 6 }
 ]
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState(items[0].name)
 
   function toggleMenu() {
-    setOpen((state) => !state)
+    setIsOpen((state) => !state)
   }
 
   return (
     <>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <MenuButton open={open} onClick={toggleMenu} />
-
+          <MenuButton open={isOpen} onClick={toggleMenu} />
           <Logo />
         </div>
 
-        <NavbarMenu items={items} />
-
+        <NavbarMenu
+          items={items}
+          activeLink={activeLink}
+          handleActiveLink={setActiveLink}
+        />
         <NavbarActions />
       </div>
 
-      <MobileMenu items={items} open={open} />
+      <MobileMenu
+        isOpen={isOpen}
+        items={items}
+        activeLink={activeLink}
+        handleActiveLink={setActiveLink}
+      />
     </>
   )
 }

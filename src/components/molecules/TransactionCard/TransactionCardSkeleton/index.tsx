@@ -6,10 +6,17 @@ export function TransactionCardSkeleton() {
     <div className={styles.container}>
       <div className={styles.row}>
         <Skeleton height={1.2} width={2} />
-        <Skeleton width={8.75} />
+
+        <div className={styles.accountName}>
+          <Skeleton width={8} />
+        </div>
       </div>
-      <Skeleton width={12} />
-      <Skeleton width={5.5} />
+
+      <div className={styles.description}>
+        <Skeleton width={12} />
+      </div>
+
+      <Skeleton width={4.5} />
     </div>
   )
 }

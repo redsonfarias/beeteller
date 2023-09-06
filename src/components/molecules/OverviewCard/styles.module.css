@@ -75,7 +75,7 @@
   transform: translateX(-100%);
   opacity: 0;
   transition:
-    transform 1.5s ease-in-out,
+    transform 1.5s,
     opacity 0.2s;
   transition-delay: 0.2s;
 }
@@ -85,7 +85,7 @@
   right: 0;
   bottom: 0;
 
-  height: 8rem;
+  height: 6rem;
   width: 50%;
   max-width: 10rem;
   border-radius: 100%;

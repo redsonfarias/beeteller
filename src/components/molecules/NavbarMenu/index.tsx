@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ItemMenu } from '@/components/atoms/ItemMenu'
 import { Skeleton } from '@/components/atoms/Skeleton'
 import { IItem } from '@/@types'
@@ -7,11 +6,11 @@ import styles from './styles.module.css'
 
 interface Props {
   items: IItem[]
+  activeLink?: string
+  handleActiveLink: (name: string) => void
 }
 
-export function NavbarMenu({ items }: Props) {
-  const [active, setActive] = useState(items[0].name)
-
+export function NavbarMenu({ items, activeLink, handleActiveLink }: Props) {
   const loading = false
   const variant = loading ? 'menuSkeletons' : 'menu'
 
@@ -23,8 +22,8 @@ export function NavbarMenu({ items }: Props) {
         ) : (
           <ItemMenu
             key={item.name}
-            active={active === item.name}
-            onClick={() => setActive(item.name)}
+            active={item.name === activeLink}
+            onClick={() => handleActiveLink(item.name)}
           >
             {item.name}
           </ItemMenu>

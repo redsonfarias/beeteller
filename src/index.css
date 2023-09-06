@@ -39,6 +39,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -60,6 +61,14 @@ button {
   border-radius: var(--radius-sm);
   padding: 1rem;
   color: var(--low-pure);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
