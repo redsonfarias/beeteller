@@ -35,3 +35,13 @@
 .button {
   margin-left: 3rem;
 }
+
+@media screen and (max-width: 64rem) {
+  .container {
+    height: 30rem;
+  }
+
+  .image {
+    height: 16rem;
+  }
+}

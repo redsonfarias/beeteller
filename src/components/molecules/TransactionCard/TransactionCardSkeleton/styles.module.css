@@ -17,3 +17,22 @@
   align-items: center;
   gap: var(--gap-sm);
 }
+
+.row:last-child {
+  display: none;
+}
+
+.description {
+  max-width: 12rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .container {
+    grid-template-columns: auto 1.2fr auto;
+    gap: var(--gap-md);
+  }
+
+  .accountName {
+    display: none;
+  }
+}
