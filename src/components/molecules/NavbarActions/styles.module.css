@@ -8,3 +8,9 @@
   width: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 48rem) {
+  .container {
+    gap: var(--gap-md);
+  }
+}

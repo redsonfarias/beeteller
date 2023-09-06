@@ -1,0 +1,39 @@
+.sidebar,
+.sidebarActive {
+  display: none;
+}
+
+@media screen and (max-width: 64rem) {
+  .sidebar,
+  .sidebarActive {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    padding: 0 3rem;
+
+    position: fixed;
+    top: calc(6.5rem - 2px);
+    z-index: 100;
+
+    height: 0;
+    width: 100%;
+    background: var(--high-pure);
+    border-bottom: 1px solid var(--high-medium);
+    box-shadow: 0px 15px 10px -15px #111;
+
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .sidebarActive {
+    height: 12rem;
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .sidebar,
+  .sidebarActive {
+    top: calc(5rem - 2px);
+  }
+}

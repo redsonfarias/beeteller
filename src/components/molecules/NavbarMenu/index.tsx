@@ -1,13 +1,9 @@
 import { useState } from 'react'
 import { ItemMenu } from '@/components/atoms/ItemMenu'
 import { Skeleton } from '@/components/atoms/Skeleton'
+import { IItem } from '@/@types'
 
 import styles from './styles.module.css'
-
-interface IItem {
-  name: string
-  skeletonWidth: number
-}
 
 interface Props {
   items: IItem[]
