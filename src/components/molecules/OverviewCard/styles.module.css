@@ -99,3 +99,14 @@
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 64rem) {
+  .container {
+    height: 12rem;
+  }
+
+  .icon {
+    flex-direction: row;
+    align-items: center;
+  }
+}

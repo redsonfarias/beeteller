@@ -4,3 +4,10 @@
   gap: var(--gap-lg);
   margin-top: 1.5rem;
 }
+
+@media screen and (max-width: 64rem) {
+  .sections {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+  }
+}

@@ -3,3 +3,16 @@
   margin: 6.75rem auto 0 auto;
   padding: 2rem;
 }
+
+@media screen and (max-width: 64rem) {
+  .content {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .content {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
+}

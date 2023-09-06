@@ -4,6 +4,7 @@
 }
 
 @media screen and (max-width: 64rem) {
+
   .sidebar,
   .sidebarActive {
     display: flex;
@@ -29,9 +30,17 @@
     height: 12rem;
     padding: 1rem 3rem;
   }
+
+  .sidebar p,
+  .sidebarActive p {
+    font-size: var(--font-md);
+    line-height: var(--line-md);
+    color: var(--primary-pure);
+  }
 }
 
 @media screen and (max-width: 48rem) {
+
   .sidebar,
   .sidebarActive {
     top: calc(5rem - 2px);
