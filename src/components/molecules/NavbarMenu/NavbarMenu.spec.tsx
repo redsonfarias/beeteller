@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 
 import { AppContext } from '@/contexts/AppContext'
-import { NavbarMenu } from './index'
+import { NavbarMenu } from '.'
 
 const items = [
   { name: 'Home', skeletonWidth: 2.5 },
@@ -12,16 +12,10 @@ const items = [
 
 describe('NavbarMenu component', () => {
   it('Should render correctly', () => {
-    render(
-      <AppContext.Provider
-        value={{ isLoading: false, finishLoading: () => {} }}
-      >
-        <NavbarMenu items={items} handleActiveLink={() => {}} />
-      </AppContext.Provider>
-    )
+    render(<NavbarMenu items={items} handleActiveLink={() => {}} />)
 
     items.forEach((item) => {
-      const itemText = screen.queryByText(`${item.name}`)
+      const itemText = screen.getByText(item.name)
       expect(itemText).toBeInTheDocument()
     })
   })
@@ -34,7 +28,7 @@ describe('NavbarMenu component', () => {
     )
 
     items.forEach((item) => {
-      const itemText = screen.queryByText(`${item.name}`)
+      const itemText = screen.queryByText(item.name)
       expect(itemText).not.toBeInTheDocument()
     })
   })

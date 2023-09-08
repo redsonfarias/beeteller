@@ -4,25 +4,25 @@ import { ActionButton } from './index'
 
 describe('ActionButton component', () => {
   it('Should render correctly', () => {
-    render(<ActionButton>Click me</ActionButton>)
+    render(<ActionButton>Avatar</ActionButton>)
 
-    const actionButton = screen.getByText('Click me')
+    const actionButton = screen.getByText('Avatar')
 
     expect(actionButton).toBeInTheDocument()
   })
 
-  it('Should add default class if active state false', () => {
-    render(<ActionButton>Click me</ActionButton>)
+  it('Should add default class if disabled === false', () => {
+    render(<ActionButton>Avatar</ActionButton>)
 
-    const actionButton = screen.getByText('Click me')
+    const actionButton = screen.getByText('Avatar')
 
     expect(actionButton).toHaveClass('default')
   })
 
-  it('Should add disabled class if disabled state true', () => {
-    render(<ActionButton disabled>Click me</ActionButton>)
+  it('Should add disabled class if disabled === true', () => {
+    render(<ActionButton disabled>Avatar</ActionButton>)
 
-    const actionButton = screen.getByText('Click me')
+    const actionButton = screen.getByText('Avatar')
 
     expect(actionButton).toHaveClass('disabled')
   })

@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react'
 import { AppContext } from '@/contexts/AppContext'
-import { ReactComponent as Logo } from '@/assets/logo.svg'
+import logo from '@/assets/logo.svg'
 import { NavbarMenu } from '@/components/molecules/NavbarMenu'
 import { NavbarActions } from '@/components/molecules/NavbarActions'
 import { MenuButton } from '@/components/atoms/MenuButton'
@@ -31,7 +31,7 @@ export function Navbar() {
       <div className={styles.container}>
         <div className={styles.logo}>
           <MenuButton open={isOpen} onClick={toggleMenu} />
-          <Logo />
+          <img src={logo} alt="" />
         </div>
 
         <NavbarMenu
