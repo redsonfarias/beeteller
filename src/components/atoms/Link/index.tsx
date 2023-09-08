@@ -6,7 +6,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   active?: boolean
 }
 
-export function ItemMenu({ active, children, ...props }: Props) {
+export function Link({ active, children, ...props }: Props) {
   const variant = active ? 'active' : 'default'
 
   return (

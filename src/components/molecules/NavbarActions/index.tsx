@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { AppContext } from '@/contexts/AppContext'
-import { ActionIcon } from '@/components/atoms/ActionIcon'
+import { ActionButton } from '@/components/atoms/ActionButton'
 import { Notification } from '@/icons/Notification'
 import { Menu } from '@/icons/Menu'
 import avatar from '@/assets/avatar.png'
@@ -14,17 +14,17 @@ export function NavbarActions() {
 
   return (
     <div className={styles.container}>
-      <ActionIcon disabled={isLoading}>
+      <ActionButton disabled={isLoading}>
         <Notification color={colorIcon} />
-      </ActionIcon>
+      </ActionButton>
 
-      <ActionIcon disabled={isLoading}>
+      <ActionButton disabled={isLoading}>
         <Menu color={colorIcon} />
-      </ActionIcon>
+      </ActionButton>
 
-      <ActionIcon disabled={isLoading}>
+      <ActionButton disabled={isLoading}>
         {!isLoading && <img src={avatar} alt="" className={styles.avatar} />}
-      </ActionIcon>
+      </ActionButton>
     </div>
   )
 }
