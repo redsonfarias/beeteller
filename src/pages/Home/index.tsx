@@ -54,7 +54,7 @@ export function Home() {
       </Section>
 
       <div className={styles.sections}>
-        <Section title="Conta digital" subtitle="Última movimentações">
+        <Section title="Conta digital" subtitle="Últimas movimentações">
           <Transactions transactions={transactions} />
         </Section>
 
