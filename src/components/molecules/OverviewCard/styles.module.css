@@ -85,7 +85,8 @@
   right: 0;
   bottom: 0;
 
-  height: 6rem;
+  height: 70%;
+  max-height: 8rem;
   width: 50%;
   max-width: 10rem;
   border-radius: 100%;
@@ -94,7 +95,7 @@
     var(--low-pure),
     var(--low-light)
   );
-  filter: blur(80px);
+  filter: blur(70px);
 
   opacity: 0;
   transition: all 0.5s ease-in-out;

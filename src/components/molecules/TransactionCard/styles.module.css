@@ -19,9 +19,7 @@
 
 .container p,
 .container span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  margin-top: 0.125rem;
 }
 
 .accountType {
@@ -46,7 +44,9 @@
 @media screen and (max-width: 48rem) {
   .container {
     grid-template-columns: auto 1.2fr auto;
+    align-items: flex-start;
     gap: var(--gap-md);
+    height: fit-content;
   }
 
   .accountName {
