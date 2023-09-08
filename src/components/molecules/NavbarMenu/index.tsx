@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { AppContext } from '@/contexts/AppContext'
-import { ItemMenu } from '@/components/atoms/ItemMenu'
+import { Link } from '@/components/atoms/Link'
 import { Skeleton } from '@/components/atoms/Skeleton'
 import { IItem } from '@/@types'
 
@@ -23,13 +23,13 @@ export function NavbarMenu({ items, activeLink, handleActiveLink }: Props) {
         isLoading ? (
           <Skeleton key={item.name} width={item.skeletonWidth} />
         ) : (
-          <ItemMenu
+          <Link
             key={item.name}
             active={item.name === activeLink}
             onClick={() => handleActiveLink(item.name)}
           >
             {item.name}
-          </ItemMenu>
+          </Link>
         )
       )}
     </div>
