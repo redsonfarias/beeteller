@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Beeteller
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Desafio apresentado pela Beeteller durante o processo seletivo, que consiste em desenvolver a tela inicial de um aplicativo de Internet Banking para um banco.
 
-## Expanding the ESLint configuration
+### Tecnologias utilizadas
+- **ReactJS**
+- **Typescript**
+- **CSS modules**
+- **Jest e React Testing Library**
+- **npm**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Ao decidir o framework para este projeto, optei por utilizar o React em vez do Next, principalmente devido ao design da aplicação, que demonstrava um comportamento de carregamento a nível de cliente. Além disso, escolhi usar Typescript para garantir maior segurança e escalabilidade no projeto.
 
-- Configure the top-level `parserOptions` property like this:
+Para manter a organização dos estilos, utilizei o CSS Modules, uma abordagem que permite manter o CSS em nível de componente e evita possíveis conflitos entre classes.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Para garantir a robustez dos codigos, foram feitos testes unitários utilizado as ferramentas Jest e React Testing Library.
+
+Por fim, para gerenciar as dependências e garantir uma gestão eficiente do projeto, utilizei o npm como gerenciador de pacotes.
+
+### Aplicação
+[https://beeteller-virid.vercel.app/](https://beeteller-virid.vercel.app/)
+
+### Instalação/Execução
+Clone o projeto
+```sh
+git clone git@github.com:redsonfarias/beeteller.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Instale as dependências
+```sh
+npm install
+```
+
+Execute a aplicação
+```sh
+npm run dev
+```
