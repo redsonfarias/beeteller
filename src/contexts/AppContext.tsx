@@ -15,7 +15,9 @@ export function AppContextProvider({ children }: AppContextProps) {
   const [isLoading, setIsLoading] = useState(true)
 
   function finishLoading() {
-    setIsLoading(false)
+    setInterval(() => {
+      setIsLoading(false)
+    }, 1000)
   }
 
   const contextValue = {
