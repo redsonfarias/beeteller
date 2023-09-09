@@ -15,7 +15,7 @@ Ao decidir o framework para este projeto, optei por utilizar o React em vez do N
 
 Para manter a organização dos estilos, utilizei o CSS Modules, uma abordagem que permite manter o CSS em nível de componente e evita possíveis conflitos entre classes.
 
-Para garantir a robustez dos codigos, foram feitos testes unitários utilizado as ferramentas Jest e React Testing Library.
+Para garantir a robustez dos codigos, foram feitos testes unitários utilizando as ferramentas Jest e React Testing Library.
 
 Por fim, para gerenciar as dependências e garantir uma gestão eficiente do projeto, utilizei o npm como gerenciador de pacotes.
 
